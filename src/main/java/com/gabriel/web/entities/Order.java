@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "tb_order")
 public class Order implements Serializable {
@@ -20,8 +22,16 @@ public class Order implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
 	
+	/*
+	 * @JoinColumn indica que client virará uma chave estrangeira
+	 * @JsonIgnore evita os loops de relações de mão dupla (lazy loading)
+	 * No caso, ele não irá mostrar a entidade Order no retorno
+	 */
+
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
