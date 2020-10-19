@@ -25,6 +25,10 @@ public class Category implements Serializable {
 	
 	private String name;
 	
+	/*
+	 * mappedBy é colocado sempre no lado mais fraco da associação e aponta para a chave estrangeira que a gerencia
+	 */
+	
 	@JsonIgnore
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
