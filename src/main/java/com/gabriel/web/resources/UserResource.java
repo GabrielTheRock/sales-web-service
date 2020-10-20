@@ -15,6 +15,7 @@ import com.gabriel.web.services.UserService;
 /*
  * Resource --> Service --> Repository
  * A aplicação funciona em camadas, começando pela resource
+ * RequestMapping indica o endpoint para chamar o recurso
  */
 
 @RestController
