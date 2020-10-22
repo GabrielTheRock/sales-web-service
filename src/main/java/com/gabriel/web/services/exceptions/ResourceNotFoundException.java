@@ -7,6 +7,7 @@ public class ResourceNotFoundException extends RuntimeException {
 	/*
 	 * Passo o id do objeto que não foi encontrado na mensagem de exceção
 	 */
+	
 	public ResourceNotFoundException(Object id) {
 		super("Resource not found. Id " + id);
 	}
