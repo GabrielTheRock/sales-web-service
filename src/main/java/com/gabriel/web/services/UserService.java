@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.gabriel.web.entities.User;
 import com.gabriel.web.repositories.UserRepository;
+import com.gabriel.web.services.exceptions.ResourceNotFoundException;
 
 /*
  * Registra a classe como componente que pode ser injetado
@@ -25,7 +26,7 @@ public class UserService {
 	
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 	
 	public User insert(User obj) {
