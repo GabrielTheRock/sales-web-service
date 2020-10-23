@@ -8,4 +8,11 @@ https://spring-web-service.herokuapp.com
 
 # Endpoints
 
-/users --> return all cadastred users with their informations
+/users --> POST requisitions needs to be on the following format: 
+
+{
+    "name": "Gabriel Rocha",
+    "email": "gabrieldarocha2013@hotmail.com",
+    "password": "123456",
+    "phone": "11987654321"
+}
