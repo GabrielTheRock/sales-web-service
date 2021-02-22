@@ -10,7 +10,7 @@ https://spring-web-service.herokuapp.com
 
 # Endpoints
 
-/users --> POST requisitions needs to be on the following format: 
+/users
 
 /products
 
