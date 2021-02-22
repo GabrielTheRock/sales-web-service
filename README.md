@@ -1,6 +1,8 @@
-# Spring Web Service
+# Sales Web Service
 
 API created using the Spring Boot Framework, with deploy on Heroku and PostgreSQL database.
+
+Contains users, products, orders
 
 # URL
 
@@ -10,9 +12,6 @@ https://spring-web-service.herokuapp.com
 
 /users --> POST requisitions needs to be on the following format: 
 
-{
-    "name": "Gabriel Rocha",
-    "email": "gabrieldarocha2013@hotmail.com",
-    "password": "123456",
-    "phone": "11987654321"
-}
+/products
+
+/orders
